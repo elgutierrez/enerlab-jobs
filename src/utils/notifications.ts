@@ -16,7 +16,7 @@ export async function sendSlackNotification(data: ApplicationData) {
   try {
     const slack = new WebClient(token)
     
-   await slack.chat.postMessage({
+   const response = await slack.chat.postMessage({
       channel: channel,
       text: `New application for ${data.position}`,
       blocks: [
@@ -37,6 +37,7 @@ export async function sendSlackNotification(data: ApplicationData) {
         }
       ]
     })
+    console.log(response)
   } catch (error) {
     console.error('Slack notification failed:', error)
   }

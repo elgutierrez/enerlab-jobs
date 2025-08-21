@@ -50,7 +50,7 @@ export class InternJuniorChallenge implements JobChallenge {
         'The secret should follow the exact format: ENERLAB_YEAR_EMAILPREFIX',
         'Email prefix means everything before the @ symbol',
         'Convert the email prefix to UPPERCASE',
-        'This position requires on-site presence in Barra Funda at least 2 days per week'
+        'This position requires on-site presence in Barra Funda at least 3 days per week'
       ],
       exampleInput: {
         fullName: "João Silva",
@@ -63,7 +63,7 @@ export class InternJuniorChallenge implements JobChallenge {
     }
   }
   
-  validateSolution(data: unknown): ValidationResult {
+  async validateSolution(data: unknown): Promise<ValidationResult> {
     try {
       const parsed = InternJuniorSchema.parse(data)
       
@@ -114,7 +114,7 @@ export class InternJuniorChallenge implements JobChallenge {
       }
       
       // Fire and forget Slack notification (don't await to keep response fast)
-      sendSlackNotification(applicationData)
+      await sendSlackNotification(applicationData)
       
       return {
         success: true,

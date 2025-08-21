@@ -20,6 +20,6 @@ export interface JobChallenge {
   slug: string
   level: string
   getChallenge(): ChallengeResponse
-  validateSolution(data: unknown): ValidationResult
+  validateSolution(data: unknown): Promise<ValidationResult>
   getSchema(): z.ZodSchema
 }
