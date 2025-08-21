@@ -49,7 +49,7 @@ app.post('/:slug/apply', async (c) => {
   
   try {
     const body = await c.req.json()
-    const result = challenge.validateSolution(body)
+    const result = await challenge.validateSolution(body)
     
     const statusCode = result.success ? 200 : 400
     
