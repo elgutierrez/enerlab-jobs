@@ -1,13 +1,13 @@
 import { z } from 'zod'
-import type { JobChallenge, ChallengeResponse, ValidationResult } from '../types/challenge'
-import { sendSlackNotification } from '../utils/notifications'
+import type { JobChallenge, ChallengeResponse, ValidationResult } from '../types/challenge.js'
+import { sendSlackNotification } from '../utils/notifications.js'
 
 const currentYear = new Date().getFullYear()
 
 const InternJuniorSchema = z.object({
   fullName: z.string().min(3, 'Full name must have at least 3 characters'),
-  email: z.email('Invalid email format'),
-  linkedinProfile: z.url('Invalid LinkedIn URL').refine(
+  email: z.string().email('Invalid email format'),
+  linkedinProfile: z.string().url('Invalid LinkedIn URL').refine(
     (url) => url.includes('linkedin.com'),
     'Must be a LinkedIn URL'
   ),

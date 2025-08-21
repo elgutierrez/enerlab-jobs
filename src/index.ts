@@ -1,7 +1,7 @@
 import { Hono } from 'hono'
 import { cors } from 'hono/cors'
 import { logger } from 'hono/logger'
-import { getJobChallenge, getAllJobs } from './jobs/registry'
+import { getJobChallenge, getAllJobs } from './jobs/registry.js'
 
 const app = new Hono()
 
@@ -10,7 +10,7 @@ app.use('*', logger())
 
 app.get('/', (c) => {
   return c.json({
-    message: 'Welcome to Enerlab Jobs Technical Challenge API',
+    message: 'Welcome to Enerlab Jobs API',
     availableJobs: getAllJobs(),
     usage: 'GET /{slug}/apply to get challenge instructions, POST /{slug}/apply to submit your solution'
   })

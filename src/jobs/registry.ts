@@ -1,5 +1,5 @@
-import type { JobChallenge } from '../types/challenge'
-import { InternJuniorChallenge } from './intern-junior'
+import type { JobChallenge } from '../types/challenge.js'
+import { InternJuniorChallenge } from './intern-junior.js'
 
 const jobChallenges = new Map<string, JobChallenge>()
 

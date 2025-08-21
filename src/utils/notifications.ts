@@ -1,5 +1,5 @@
 import { WebClient } from '@slack/web-api'
-import { env } from './env'
+import { env } from './env.js'
 
 interface ApplicationData {
   fullName: string
