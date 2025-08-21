@@ -3,6 +3,5 @@
     "api/index.ts": {
       "runtime": "edge"
     }
-  },
-  "buildCommand": null
+  }
 }

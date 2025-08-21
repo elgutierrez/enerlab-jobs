@@ -1,7 +1,6 @@
 import { Hono } from 'hono'
 import { cors } from 'hono/cors'
 import { logger } from 'hono/logger'
-import { zValidator } from '@hono/zod-validator'
 import { getJobChallenge, getAllJobs } from './jobs/registry'
 
 const app = new Hono()
