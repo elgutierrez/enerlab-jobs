@@ -27,7 +27,7 @@ export class InternJuniorChallenge implements JobChallenge {
     return {
       title: 'Intern/Junior Developer Challenge - Enerlab',
       description: 'Apply for our Intern/Junior Developer position. This is a HYBRID role requiring at least 2 days on-site in Barra Funda, São Paulo.',
-      jobPost: 'https://www.linkedin.com/hiring/jobs/4270192595/detail/',
+      jobPost: 'https://www.linkedin.com/jobs/view/4270192595/',
       instructions: [
         'To apply, make a POST request to this same endpoint',
         'The request body should be a JSON with the following fields:',
