@@ -1,0 +1,29 @@
+{
+  "name": "enerlab-jobs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.11.0",
+  "dependencies": {
+    "@hono/zod-validator": "^0.7.2",
+    "@slack/web-api": "^7.9.3",
+    "dotenv": "^17.2.1",
+    "hono": "^4.9.2",
+    "zod": "^4.0.17"
+  },
+  "devDependencies": {
+    "@hono/node-server": "^1.19.0",
+    "@hono/vite-dev-server": "^0.20.1",
+    "@types/node": "^24.3.0",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.3"
+  }
+}
