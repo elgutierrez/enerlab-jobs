@@ -2,6 +2,11 @@
   "name": "enerlab-jobs",
   "version": "1.0.0",
   "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "echo 'No build needed for Vercel deployment'",
+    "deploy": "vercel deploy"
+  },
   "dependencies": {
     "@hono/zod-validator": "^0.7.2",
     "@slack/web-api": "^7.9.3",
