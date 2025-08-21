@@ -1,11 +1,8 @@
 {
-  "buildCommand": "pnpm build",
-  "outputDirectory": "dist",
-  "framework": null,
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/api"
+  "functions": {
+    "api/index.ts": {
+      "runtime": "edge"
     }
-  ]
+  },
+  "buildCommand": null
 }
